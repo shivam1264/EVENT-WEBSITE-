@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Admin Dashboard | Shri Shyam Event & Spark Productions</title>
+  <meta name="description" content="Central production & business management portal for Shri Shyam Events. Real-time CRM, calendar schedule, and portfolio CMS." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- ======================================================================
+       1. ADMIN AUTHENTICATION VIEW (Luxury Executive Portal)
+       ====================================================================== -->
+  <div id="admin-auth-view" class="admin-auth-container">
+    <!-- Ambient Golden Glow Background Orbs -->
+    <div class="auth-ambient-orb auth-orb-1"></div>
+    <div class="auth-ambient-orb auth-orb-2"></div>
+    <div class="auth-ambient-orb auth-orb-3"></div>
+
+    <div class="admin-auth-wrapper">
+      <!-- Main Glassmorphism Card -->
+      <div class="admin-auth-card">
+        <!-- Top Crown & Emblem -->
+        <div class="auth-emblem-header">
+          <div class="auth-crown-tag">
+            <span>👑</span>
+            <span>EXECUTIVE MANAGEMENT PORTAL</span>
+          </div>
+          <div class="auth-brand-emblem">
+            <svg class="auth-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="7" width="34" height="34" rx="4" transform="rotate(45 24 24)" stroke="url(#authGoldGrad)" stroke-width="1.5" fill="rgba(201,147,53,0.06)" />
+              <rect x="7" y="7" width="34" height="34" rx="4" stroke="url(#authGoldGrad)" stroke-width="1.5" fill="none" />
+              <circle cx="24" cy="24" r="14.5" stroke="url(#authGoldGrad)" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+              <defs>
+                <linearGradient id="authGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f3cb75" />
+                  <stop offset="50%" stop-color="#c99335" />
+                  <stop offset="100%" stop-color="#916014" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="auth-emblem-letter">S</span>
+          </div>
+          <h1 class="auth-title">SHRI SHYAM EVENTS</h1>
+          <p class="auth-subtitle">Central Production &amp; Business Intelligence Portal</p>
+        </div>
+
+        <!-- Gold Filigree Divider -->
+        <div class="auth-divider">
+          <span class="auth-divider-line"></span>
+          <span class="auth-divider-icon">✦</span>
+          <span class="auth-divider-line"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="admin-login-form" class="auth-form" autocomplete="on">
+          <!-- Email / Username -->
+          <div class="auth-input-group">
+            <label class="auth-label" for="admin-login-email">
+              <span>Official Email or Registered Phone</span>
+            </label>
+            <div class="auth-input-wrapper">
+              <span class="auth-input-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a86c14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <input type="text" id="admin-login-email" class="auth-input" placeholder="Official Email or Phone" required />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-input-group">
+            <div class="auth-label-row">
+              <label class="auth-label" for="admin-login-password">
+                <span>Security Password</span>
+              </label>
+            </div>
+            <div class="auth-input-wrapper">
+              <span class="auth-input-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a86c14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" id="admin-login-password" class="auth-input" placeholder="Enter password" required />
+              <button type="button" class="auth-password-toggle" id="toggle-password-visibility" aria-label="Toggle password visibility">
+                <svg class="eye-icon-show" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8c97a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="eye-icon-hide" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8c97a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="auth-submit-btn">
+            <span>Sign In to Executive Dashboard</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Security Badge & Return Link -->
+        <div class="auth-footer">
+          <div class="auth-security-notice">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>256-Bit SSL Encrypted Admin Console</span>
+          </div>
+          <a href="index.html" class="auth-back-link">
+            &larr; Return to Customer Website
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================================
+       2. ADMIN DASHBOARD LAYOUT (When Authenticated)
+       ====================================================================== -->
+  <div id="admin-dashboard-view" class="admin-layout" style="display: none;">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="admin-brand-link" onclick="AdminController.switchTab('overview')" style="cursor: pointer;" title="Admin Dashboard Overview">
+          <div class="admin-brand-icon">S</div>
+          <div>
+            <div class="admin-brand-title">SHRI SHYAM</div>
+            <div class="admin-brand-sub">Admin Console</div>
+          </div>
+        </div>
+        <button id="admin-sidebar-close-btn" class="admin-sidebar-close-btn" aria-label="Close Sidebar" style="display: none; background: transparent; border: none; font-size: 1.6rem; color: #d4af37; cursor: pointer; padding: 4px 8px; line-height: 1;">&times;</button>
+      </div>
+
+      <nav class="admin-nav">
+        <a class="admin-nav-item active" data-tab="overview">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Overview</span>
+        </a>
+
+        <a class="admin-nav-item" data-tab="inquiries">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Inquiries CRM</span>
+          <span class="badge-count" id="admin-new-inquiries-badge" style="display: none;">0</span>
+        </a>
+
+        <a class="admin-nav-item" data-tab="media">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <span>Media Manager</span>
+        </a>
+
+        <a class="admin-nav-item" data-tab="calendar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Bookings & Calendar</span>
+        </a>
+
+        <a class="admin-nav-item" data-tab="team">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span>Partner Team</span>
+        </a>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user-card" onclick="AdminController.openProfileModal()" style="cursor: pointer; padding: 6px; border-radius: 10px; transition: background 0.2s ease;" title="Click to view & edit your profile">
+          <div class="admin-avatar" id="admin-current-avatar">SS</div>
+          <div class="admin-user-info">
+            <div class="admin-user-name" id="admin-current-name">Shivam Sharma</div>
+            <div class="admin-user-role" id="admin-current-role">Founder & Operations</div>
+          </div>
+          <div style="margin-left: auto; font-size: 0.85rem; color: #9c7128;" title="Edit Profile">⚙️</div>
+        </div>
+        <div style="margin-top: 10px; display: flex; gap: 8px;">
+          <a href="index.html" class="btn btn-secondary btn-sm" style="flex: 1; font-size: 0.76rem; justify-content: center;">
+            👁️ View Site
+          </a>
+          <button id="admin-logout-btn" class="btn btn-secondary btn-sm" style="color: #ef4444; font-weight: 700; padding: 4px 10px;" title="Sign Out">
+            ⏻
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="admin-sidebar-backdrop" class="admin-sidebar-backdrop"></div>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <div class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <button id="admin-mobile-toggle" style="display: none; background: #ffffff; border: 1.5px solid rgba(212, 175, 55, 0.4); border-radius: 8px; width: 36px; height: 36px; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; color: #8c6016;" title="Toggle Menu">
+            ☰
+          </button>
+          <div class="admin-topbar-title-wrap">
+            <h2 class="admin-topbar-title" id="admin-topbar-page-title">Executive Dashboard Overview</h2>
+            <div class="admin-topbar-subtitle">
+              <span class="admin-live-pulse">Production Live</span>
+              <span style="color: #d4af37;">•</span>
+              <span id="admin-topbar-date">September 2026 Production Hub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-topbar-actions">
+          <span class="topbar-role-pill" id="admin-topbar-role-badge">👑 Super Admin</span>
+          <a href="index.html" class="btn-back-site" target="_blank" title="Preview Public Event Website">
+            <span>Customer Website</span> ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="admin-content-body">
+
+        <!-- TAB 1: OVERVIEW -->
+        <div id="admin-panel-overview" class="admin-tab-panel">
+          <!-- Stats Row (Ultra-Compact Sleek Capsules) -->
+          <div class="stats-grid">
+            <!-- Card 1: Total Inquiries -->
+            <div class="stat-card card-blue">
+              <div class="stat-card-icon blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="stat-card-content">
+                <div class="stat-card-value" id="kpi-total-inquiries">0</div>
+                <div class="stat-card-label">Total Inquiries</div>
+              </div>
+              <span class="stat-trend-pill blue">● Live</span>
+            </div>
+
+            <!-- Card 2: New Leads -->
+            <div class="stat-card card-gold">
+              <div class="stat-card-icon gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                </svg>
+              </div>
+              <div class="stat-card-content">
+                <div class="stat-card-value" id="kpi-new-leads">0</div>
+                <div class="stat-card-label">New Leads</div>
+              </div>
+              <span class="stat-trend-pill gold">⚡ Action</span>
+            </div>
+
+            <!-- Card 3: Booked Events -->
+            <div class="stat-card card-green">
+              <div class="stat-card-icon green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                  <path d="M9 16l2 2 4-4"></path>
+                </svg>
+              </div>
+              <div class="stat-card-content">
+                <div class="stat-card-value" id="kpi-upcoming-events">0</div>
+                <div class="stat-card-label">Booked Events</div>
+              </div>
+              <span class="stat-trend-pill green">✓ Booked</span>
+            </div>
+
+            <!-- Card 4: Live Portfolio -->
+            <div class="stat-card card-purple">
+              <div class="stat-card-icon purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="stat-card-content">
+                <div class="stat-card-value" id="kpi-total-media">0</div>
+                <div class="stat-card-label" style="white-space: nowrap;">Portfolio Photos</div>
+              </div>
+              <span class="stat-trend-pill purple">★ Gallery</span>
+            </div>
+          </div>
+
+          <!-- Full-Width Recent Inquiries Panel (Spacious - No Overlap) -->
+          <div class="panel-card" style="margin-bottom: 1.5rem; min-height: auto;">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span>Recent Inquiries</span>
+                <span style="font-size: 0.76rem; font-weight: 700; color: #9c7128; background: #fefce8; padding: 3px 8px; border-radius: 999px; border: 1px solid #fef08a;">Live Stream</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="AdminController.switchTab('inquiries')">
+                View All CRM &rarr;
+              </button>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Event Type</th>
+                    <th>Event Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-inquiries-table-body">
+                  <!-- Dynamic rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 2-Column Lower Section: Upcoming Schedule & Shortcuts -->
+          <div class="dashboard-grid-2col">
+            <!-- Upcoming Schedule -->
+            <div class="panel-card" style="min-height: 280px;">
+              <div class="panel-header">
+                <div class="panel-title" style="white-space: nowrap; font-size: 1.12rem;">
+                  <span>📅 Upcoming Production Schedule</span>
+                </div>
+                <button class="btn btn-gold btn-sm" style="padding: 5px 12px; font-size: 0.76rem;" onclick="AdminController.openAddBookingModal()">
+                  + Add Booking
+                </button>
+              </div>
+              <div id="overview-upcoming-schedule">
+                <!-- Dynamic bookings -->
+              </div>
+            </div>
+
+            <!-- Quick Management Shortcuts -->
+            <div class="panel-card" style="min-height: 280px;">
+              <div class="panel-header">
+                <div class="panel-title" style="font-size: 1.12rem;">
+                  <span>⚡ Quick Production Actions</span>
+                </div>
+                <span style="font-size: 0.74rem; color: #64748b;">Fast shortcuts</span>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="padding: 12px 14px; background: #fdfbf7; border: 1.5px solid rgba(230, 214, 192, 0.7); border-radius: 12px; display: flex; align-items: center; justify-content: space-between;">
+                  <div>
+                    <div style="font-weight: 800; color: #1e2638; font-size: 0.9rem;">📸 Add Portfolio Showcase</div>
+                    <div style="font-size: 0.76rem; color: #64748b; margin-top: 1px;">Upload stage decor, pyro effects, or costume mascot media</div>
+                  </div>
+                  <button class="btn btn-gold btn-sm" style="padding: 6px 12px; font-size: 0.76rem; flex-shrink: 0;" onclick="AdminController.openAddMediaModal()">
+                    + Add Photo
+                  </button>
+                </div>
+
+                <div style="padding: 12px 14px; background: #fdfbf7; border: 1.5px solid rgba(230, 214, 192, 0.7); border-radius: 12px; display: flex; align-items: center; justify-content: space-between;">
+                  <div>
+                    <div style="font-weight: 800; color: #1e2638; font-size: 0.9rem;">🗓️ Production Calendar Hub</div>
+                    <div style="font-size: 0.76rem; color: #64748b; margin-top: 1px;">View full monthly schedule, dates, and order sync</div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" style="padding: 6px 12px; font-size: 0.76rem; flex-shrink: 0;" onclick="AdminController.switchTab('calendar')">
+                    Open Calendar &rarr;
+                  </button>
+                </div>
+
+                <div style="padding: 12px 14px; background: #fdfbf7; border: 1.5px solid rgba(230, 214, 192, 0.7); border-radius: 12px; display: flex; align-items: center; justify-content: space-between;">
+                  <div>
+                    <div style="font-weight: 800; color: #1e2638; font-size: 0.9rem;">👥 Business Partners Portal</div>
+                    <div style="font-size: 0.76rem; color: #64748b; margin-top: 1px;">Switch active logins and manage team access</div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" style="padding: 6px 12px; font-size: 0.76rem; flex-shrink: 0;" onclick="AdminController.switchTab('team')">
+                    View Team &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: INQUIRIES CRM -->
+        <div id="admin-panel-inquiries" class="admin-tab-panel" style="display: none;">
+          <div class="inquiry-filter-bar">
+            <div class="gallery-filter-tabs" style="margin-bottom: 0; display: flex; gap: 8px; flex-wrap: wrap;">
+              <button class="filter-tab inquiry-filter-pill active" data-status="all">All Inquiries</button>
+              <button class="filter-tab inquiry-filter-pill" data-status="new"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2563eb; margin-right: 5px;"></span> New</button>
+              <button class="filter-tab inquiry-filter-pill" data-status="contacted"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; margin-right: 5px;"></span> Contacted</button>
+              <button class="filter-tab inquiry-filter-pill" data-status="booked"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #10b981; margin-right: 5px;"></span> Booked</button>
+              <button class="filter-tab inquiry-filter-pill" data-status="closed"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #64748b; margin-right: 5px;"></span> Closed</button>
+            </div>
+
+            <div class="search-input-wrap">
+              <span class="search-icon" style="display: flex; align-items: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8c6016" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input type="text" id="inquiries-search-input" placeholder="Search by name, phone, city, service..." />
+            </div>
+          </div>
+
+          <div id="all-inquiries-container">
+            <!-- Populated dynamically as Executive Luxury Cards on both Laptop and Mobile -->
+          </div>
+        </div>
+
+        <!-- TAB 3: MEDIA MANAGER (CMS) -->
+        <div id="admin-panel-media" class="admin-tab-panel" style="display: none;">
+          <div class="media-manager-toolbar">
+            <div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 800; margin-bottom: 4px; color: #1e2638;">Portfolio Media Manager (Live CMS)</h3>
+              <p style="font-size: 0.86rem; color: #637083;">
+                Photos and videos added or removed here will immediately sync to the customer website gallery.
+              </p>
+            </div>
+            <button class="btn btn-gold" onclick="AdminController.openAddMediaModal()">
+              + Upload New Photo / Video
+            </button>
+          </div>
+
+          <div class="media-grid-admin" id="admin-media-grid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- TAB 4: CALENDAR & BOOKINGS -->
+        <div id="admin-panel-calendar" class="admin-tab-panel" style="display: none;">
+          <div style="display: grid; grid-template-columns: 1.55fr 1fr; gap: 1.5rem;">
+            <div class="calendar-wrap">
+              <div class="calendar-header">
+                <div>
+                  <div class="calendar-month-title" id="calendar-month-display">September 2026</div>
+                  <span style="font-size: 0.74rem; color: #8c6016; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; margin-top: 2px;">
+                    <span>✨</span> Click any date cell to schedule an event
+                  </span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <div class="calendar-nav-pill-group">
+                    <button class="calendar-nav-btn" id="calendar-prev-month" title="Previous Month">❮ Prev</button>
+                    <button class="calendar-nav-btn today-btn" id="calendar-today-btn" title="Current Month">Today</button>
+                    <button class="calendar-nav-btn" id="calendar-next-month" title="Next Month">Next ❯</button>
+                  </div>
+                  <button class="btn btn-gold btn-sm" onclick="AdminController.openAddBookingModal()" style="display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 3px 10px rgba(212,175,55,0.3);">
+                    <span>➕</span> Add Event
+                  </button>
+                </div>
+              </div>
+
+              <div class="calendar-grid">
+                <div class="calendar-day-head">Sun</div>
+                <div class="calendar-day-head">Mon</div>
+                <div class="calendar-day-head">Tue</div>
+                <div class="calendar-day-head">Wed</div>
+                <div class="calendar-day-head">Thu</div>
+                <div class="calendar-day-head">Fri</div>
+                <div class="calendar-day-head">Sat</div>
+              </div>
+
+              <div class="calendar-grid" id="admin-calendar-cells" style="margin-top: 8px;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <div class="panel-card">
+              <div class="panel-header">
+                <div>
+                  <div class="panel-title" style="font-size: 1.12rem;">Confirmed Event Schedule</div>
+                  <span style="font-size: 0.74rem; color: #64748b;">All synced confirmed production orders</span>
+                </div>
+                <button class="btn btn-gold btn-sm" style="padding: 5px 12px; font-size: 0.76rem;" onclick="AdminController.openAddBookingModal()">
+                  + Add Booking
+                </button>
+              </div>
+              <div id="admin-bookings-list" style="max-height: 460px; overflow-y: auto; padding-right: 4px;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: PARTNER TEAM -->
+        <div id="admin-panel-team" class="admin-tab-panel" style="display: none;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.6rem; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
+                <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 800; color: #1e2638; margin: 0;">
+                  👥 Business Partners &amp; Team Management
+                </h3>
+                <span class="badge badge-gold" style="font-size: 0.72rem; padding: 2px 8px;">Super Admin Portal</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #64748b; margin: 0;">
+                Create new team members, manage executive access levels, and remove accounts.
+              </p>
+            </div>
+            <div id="team-action-toolbar">
+              <button class="btn btn-gold" onclick="AdminController.openAddTeamModal()" style="display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(212,175,55,0.35);">
+                <span>➕</span> Add New Team Member
+              </button>
+            </div>
+          </div>
+
+          <div class="team-cards-grid" id="admin-team-grid">
+            <!-- Populated dynamically as Luxury Executive Cards -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+
+  <!-- ======================================================================
+       MODALS & DIALOGS
+       ====================================================================== -->
+
+  <!-- 1. ADMIN INQUIRY DETAIL MODAL -->
+  <div id="inquiry-detail-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close-btn">&times;</button>
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; padding-bottom: 0.85rem; border-bottom: 1.5px solid rgba(230, 214, 192, 0.6); padding-right: 35px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <h3 id="modal-inq-id" style="font-family: monospace; font-size: 1.2rem; color: #8c6016; font-weight: 800; background: #fefce8; border: 1.5px solid #fde047; padding: 3px 10px; border-radius: 8px;">#INQ-101</h3>
+          <span style="font-size: 0.82rem; font-weight: 700; color: #64748b;">Inquiry Details</span>
+        </div>
+        <div>
+          <a id="modal-inq-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-modal">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Information Tiles -->
+      <div class="inquiry-info-grid">
+        <div class="info-tile">
+          <div class="info-tile-label">👤 Customer Name</div>
+          <div id="modal-inq-name" class="info-tile-value">-</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-tile-label">📞 Phone Number</div>
+          <div id="modal-inq-phone" class="info-tile-value" style="color: #8c6016;">-</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-tile-label">✉️ Email Address</div>
+          <div id="modal-inq-email" class="info-tile-value" style="font-size: 0.85rem; color: #475569;">-</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-tile-label">📅 Event Date</div>
+          <div id="modal-inq-date" class="info-tile-value">-</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-tile-label">✨ Service Required</div>
+          <div id="modal-inq-event-type" class="info-tile-value" style="color: #8c6016;">-</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-tile-label">📍 City / Guests</div>
+          <div class="info-tile-value"><span id="modal-inq-city">-</span> (<span id="modal-inq-guests">-</span> Guests)</div>
+        </div>
+      </div>
+
+      <!-- Customer Requirements -->
+      <div class="inquiry-message-card">
+        <div style="font-size: 0.7rem; font-weight: 800; color: #8c6016; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+          💬 Customer Requirements & Message:
+        </div>
+        <p id="modal-inq-message" style="font-size: 0.88rem; color: #334155; line-height: 1.5; margin: 0;">-</p>
+      </div>
+
+      <!-- Status & Notes Management -->
+      <div style="margin-bottom: 0.85rem;">
+        <label class="form-label" for="modal-inq-status-select">Update Pipeline Status</label>
+        <select id="modal-inq-status-select" class="form-select">
+          <option value="New">🔵 New Lead</option>
+          <option value="Contacted">🟠 Contacted (Quotation Sent)</option>
+          <option value="Booked">🟢 Booked (Advance Paid)</option>
+          <option value="Closed">⚪ Closed (Archived)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <label class="form-label" for="modal-inq-notes">Internal Production / Partner Notes</label>
+        <textarea id="modal-inq-notes" class="form-textarea" placeholder="Add notes about calls, client preferences, budget quoted..."></textarea>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 0.5rem; border-top: 1px solid rgba(230, 214, 192, 0.5);">
+        <button class="btn btn-secondary" onclick="document.getElementById('inquiry-detail-modal').classList.remove('active')">Cancel</button>
+        <button id="modal-inq-save-notes-btn" class="btn btn-gold">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MEDIA UPLOAD / EDIT MODAL -->
+  <div id="media-upload-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 620px;">
+      <button class="modal-close-btn">&times;</button>
+      <h3 id="media-modal-title" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.5rem;">
+        Upload / Add New Event Media
+      </h3>
+
+      <form id="media-upload-form">
+        <input type="hidden" id="media-editing-id" />
+
+        <div style="margin-bottom: 1rem;">
+          <label class="form-label" for="media-input-title">Media Title <span>*</span></label>
+          <input type="text" id="media-input-title" class="form-input" placeholder="e.g. Royal Crystal Mandap with Rose Wall" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <label class="form-label" for="media-input-category">Service Category <span>*</span></label>
+            <select id="media-input-category" class="form-select" required>
+              <option value="wedding-entry">Wedding Entry Decoration</option>
+              <option value="pyro-shows">Pyro & Cold Spark Shows</option>
+              <option value="stage-decor">Stage & Mandap Decoration</option>
+              <option value="birthday-party">Birthday Party Decoration</option>
+              <option value="costume-characters">Costume Mascot Performers</option>
+              <option value="mehendi-decor">Mehendi & Haldi Decor</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label" for="media-input-type">Media Type</label>
+            <select id="media-input-type" class="form-select">
+              <option value="image">High-Res Photo</option>
+              <option value="video-sim">Video Demonstration</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label class="form-label" for="media-input-url">Image / Thumbnail URL <span>*</span></label>
+          <input type="url" id="media-input-url" class="form-input" placeholder="https://images.unsplash.com/photo-..." required />
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label class="form-label" for="media-input-video-url">Video MP4 URL (Optional for video items)</label>
+          <input type="url" id="media-input-video-url" class="form-input" placeholder="https://assets.mixkit.co/..." />
+        </div>
+
+        <!-- Quick Presets -->
+        <div style="margin-bottom: 1.25rem; padding: 10px; background: rgba(212,175,55,0.06); border-radius: var(--radius-sm); border: 1px dashed var(--border-subtle);">
+          <div style="font-size: 0.75rem; color: var(--gold-dark); margin-bottom: 6px; font-weight: 700;">⚡ Quick Presets (Click to autofill):</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-secondary btn-sm preset-media-btn" style="font-size: 0.75rem; padding: 3px 8px;"
+              data-title="Grand LED Tunnel Entryway"
+              data-cat="wedding-entry"
+              data-url="https://images.unsplash.com/photo-1545232979-fbf68fe9b1af?auto=format&fit=crop&w=1200&q=80"
+              data-tags="LED Tunnel, Modern Entry, Neon">
+              + LED Tunnel Entry
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm preset-media-btn" style="font-size: 0.75rem; padding: 3px 8px;"
+              data-title="Cascading Waterfall Cold Pyro Show"
+              data-cat="pyro-shows"
+              data-url="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=80"
+              data-tags="Waterfall Sparks, Stage Show, First Dance">
+              + Waterfall Cold Pyro
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm preset-media-btn" style="font-size: 0.75rem; padding: 3px 8px;"
+              data-title="Bohemian Moroccan Mehendi Canopy"
+              data-cat="mehendi-decor"
+              data-url="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80"
+              data-tags="Moroccan, Bohemian, Marigold">
+              + Moroccan Mehendi
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label class="form-label" for="media-input-desc">Short Description</label>
+          <textarea id="media-input-desc" class="form-textarea" style="min-height: 70px;" placeholder="Describe elements used in this decor..."></textarea>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label class="form-label" for="media-input-tags">Tags (Comma separated)</label>
+          <input type="text" id="media-input-tags" class="form-input" placeholder="e.g. Royal Mandap, Cold Pyro, Fresh Roses" />
+        </div>
+
+        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">
+          <input type="checkbox" id="media-input-featured" style="width: 18px; height: 18px; accent-color: var(--gold-primary);" />
+          <label for="media-input-featured" style="font-size: 0.9rem; color: var(--text-primary); cursor: pointer;">
+            Mark as ★ Featured Highlight on Home Page
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('media-upload-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-gold">Publish to Public Portfolio</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. ADD BOOKING MODAL -->
+  <div id="add-booking-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 540px;">
+      <button class="modal-close-btn">&times;</button>
+      
+      <div style="margin-bottom: 1.2rem; padding-bottom: 0.85rem; border-bottom: 1.5px solid rgba(230, 214, 192, 0.6); padding-right: 35px;">
+        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 800; color: #1e2638; display: flex; align-items: center; gap: 8px; margin: 0;">
+          <span>📅</span> Add Event Booking to Calendar
+        </h3>
+        <p style="font-size: 0.76rem; color: #64748b; margin: 3px 0 0 0;">Schedule a confirmed production setup and reserve dates</p>
+      </div>
+
+      <form id="booking-add-form">
+        <!-- Quick Booking Presets -->
+        <div style="margin-bottom: 1rem; padding: 10px 12px; background: rgba(212,175,55,0.06); border-radius: 10px; border: 1px dashed rgba(212,175,55,0.4);">
+          <div style="font-size: 0.7rem; color: #8c6016; margin-bottom: 5px; font-weight: 800; text-transform: uppercase;">⚡ Quick Presets (Click to autofill):</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-secondary btn-sm preset-booking-btn" style="font-size: 0.72rem; padding: 3px 8px; font-weight: 700;"
+              data-client="Vikram & Maya Sangeet"
+              data-service="8-Point Cold Spark Show + Dry Ice Fog"
+              data-amount="₹65,000"
+              data-venue="Taj Lands End, Bandra">
+              + Sangeet Pyro Show
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm preset-booking-btn" style="font-size: 0.72rem; padding: 3px 8px; font-weight: 700;"
+              data-client="Advik 6th Birthday"
+              data-service="Costume Mascot + Neon Balloon Decor"
+              data-amount="₹38,000"
+              data-venue="Emerald Club, Thane">
+              + Birthday Mascot
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm preset-booking-btn" style="font-size: 0.72rem; padding: 3px 8px; font-weight: 700;"
+              data-client="Rohan & Ananya Wedding"
+              data-service="Royal Floral Stage & Baraat Entry"
+              data-amount="₹1,85,000"
+              data-venue="JW Marriott, Juhu">
+              + Royal Wedding Stage
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="booking-input-client">👤 Client / Event Name <span>*</span></label>
+          <input type="text" id="booking-input-client" class="form-input" placeholder="e.g. Vikram & Maya Sangeet" required />
+        </div>
+
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="booking-input-service">✨ Service Package <span>*</span></label>
+          <input type="text" id="booking-input-service" class="form-input" placeholder="e.g. 8-Point Cold Spark Show + Dry Ice Fog" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 0.9rem;">
+          <div>
+            <label class="form-label" for="booking-input-date">📅 Event Date <span>*</span></label>
+            <input type="date" id="booking-input-date" class="form-input" value="2026-09-18" required />
+          </div>
+          <div>
+            <label class="form-label" for="booking-input-amount">💰 Package Amount</label>
+            <input type="text" id="booking-input-amount" class="form-input" placeholder="e.g. ₹75,000" />
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <label class="form-label" for="booking-input-venue">📍 Venue / Banquet Location</label>
+          <input type="text" id="booking-input-venue" class="form-input" placeholder="e.g. Grand Hyatt, Santacruz" />
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 0.5rem; border-top: 1px solid rgba(230, 214, 192, 0.5);">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('add-booking-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-gold">Save Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. ADMIN PROFILE & ACCOUNT EDIT MODAL -->
+  <div id="admin-profile-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 520px;">
+      <button class="modal-close-btn">&times;</button>
+      
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1.5px solid rgba(230, 214, 192, 0.6); padding-right: 35px;">
+        <div class="admin-avatar" id="profile-modal-avatar" style="width: 56px; height: 56px; font-size: 1.25rem; box-shadow: 0 4px 14px rgba(212,175,55,0.35);">SS</div>
+        <div>
+          <h3 id="profile-modal-title-name" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 800; color: #1e2638; margin: 0 0 2px 0;">Shivam Sharma</h3>
+          <span id="profile-modal-title-role" class="partner-role-tag" style="margin: 0; font-size: 0.74rem;">👑 Founder & Head of Production</span>
+        </div>
+      </div>
+
+      <form id="admin-profile-edit-form">
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="profile-input-name">👤 Full Name <span>*</span></label>
+          <input type="text" id="profile-input-name" class="form-input" required />
+        </div>
+
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="profile-input-role">💼 Job Role / Designation <span>*</span></label>
+          <input type="text" id="profile-input-role" class="form-input" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 0.9rem;">
+          <div>
+            <label class="form-label" for="profile-input-email">✉️ Email Address <span>*</span></label>
+            <input type="email" id="profile-input-email" class="form-input" required />
+          </div>
+          <div>
+            <label class="form-label" for="profile-input-phone">📞 Contact Phone</label>
+            <input type="tel" id="profile-input-phone" class="form-input" placeholder="+91 98201 00000" />
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <label class="form-label" for="profile-input-password">🔑 Security Password / PIN</label>
+          <input type="text" id="profile-input-password" class="form-input" placeholder="Leave blank to keep current password" />
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.75rem; border-top: 1.5px solid rgba(230, 214, 192, 0.5);">
+          <button type="button" class="btn btn-secondary btn-sm" style="color: #ef4444; border-color: #fca5a5;" onclick="AdminController.handleLogout()">
+            🚪 Sign Out
+          </button>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('admin-profile-modal').classList.remove('active')">Cancel</button>
+            <button type="submit" class="btn btn-gold btn-sm">Save Profile</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. ADD NEW TEAM MEMBER MODAL (Super Admin) -->
+  <div id="add-team-member-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 520px;">
+      <button class="modal-close-btn" onclick="document.getElementById('add-team-member-modal').classList.remove('active')">&times;</button>
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; padding-bottom: 0.9rem; border-bottom: 1.5px solid rgba(230, 214, 192, 0.6); padding-right: 35px;">
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #fef9ee 0%, #faecd4 100%); border: 1.5px solid #d4af37; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+          👤
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 800; color: #1e2638; margin: 0 0 2px 0;">
+            Add New Team Member / Admin
+          </h3>
+          <p style="font-size: 0.76rem; color: #64748b; margin: 0;">
+            Create login credentials &amp; assign access privileges
+          </p>
+        </div>
+      </div>
+
+      <form id="add-team-member-form">
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="new-team-name">👤 Full Name <span>*</span></label>
+          <input type="text" id="new-team-name" class="form-input" placeholder="e.g. Ramesh Kumar" required />
+        </div>
+
+        <div style="margin-bottom: 0.9rem;">
+          <label class="form-label" for="new-team-role">💼 Job Role / Designation <span>*</span></label>
+          <input type="text" id="new-team-role" class="form-input" placeholder="e.g. Lighting &amp; SFX Production Lead" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 0.9rem; margin-bottom: 0.9rem;">
+          <div>
+            <label class="form-label" for="new-team-email">✉️ Official Email <span>*</span></label>
+            <input type="email" id="new-team-email" class="form-input" placeholder="name@shrishyamevents.com" required />
+          </div>
+          <div>
+            <label class="form-label" for="new-team-phone">📞 Phone / WhatsApp</label>
+            <input type="tel" id="new-team-phone" class="form-input" placeholder="+91 98000 00000" />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 1.25rem;">
+          <div>
+            <label class="form-label" for="new-team-access">🛡️ Access Permission Level <span>*</span></label>
+            <select id="new-team-access" class="form-input" style="cursor: pointer;">
+              <option value="Operations Manager">🎯 Operations Manager</option>
+              <option value="Decor Specialist">🌸 Decor &amp; Media Specialist</option>
+              <option value="Event Coordinator">📋 Event Coordinator</option>
+              <option value="Super Admin">👑 Super Admin (Full Access)</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="new-team-password">🔑 Default Password</label>
+            <input type="text" id="new-team-password" class="form-input" value="admin" required />
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 0.75rem; border-top: 1.5px solid rgba(230, 214, 192, 0.5);">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('add-team-member-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-gold" style="display: flex; align-items: center; gap: 6px;">
+            <span>✓</span> Create Account
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.AdminController.init();
+      window.AdminController.render();
+
+      const handleAdminHash = () => {
+        const hash = window.location.hash.replace('#', '') || 'overview';
+        if (['overview', 'inquiries', 'media', 'calendar', 'team'].includes(hash)) {
+          if (window.AdminController.isAuthenticated()) {
+            window.AdminController.switchTab(hash);
+          }
+        }
+      };
+
+      window.addEventListener('hashchange', handleAdminHash);
+      handleAdminHash();
+    });
+  </script>
+</body>
+</html>
