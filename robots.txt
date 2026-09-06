@@ -5,6 +5,7 @@
 User-agent: *
 Allow: /
 Allow: /index.html
+Allow: /google029b2c970c9d24ca.html
 Allow: /css/
 Allow: /js/public.js
 Allow: /js/store.js
