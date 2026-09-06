@@ -5,9 +5,9 @@
 
 const STORAGE_KEYS = {
   MEDIA: 'vv_media_items_v2',
-  INQUIRIES: 'vv_inquiries_v1',
-  BOOKINGS: 'vv_bookings_v1',
-  ADMINS: 'vv_admins_v1',
+  INQUIRIES: 'vv_inquiries_v2',
+  BOOKINGS: 'vv_bookings_v2',
+  ADMINS: 'vv_admins_v2',
   AUTH: 'vv_auth_session_v1'
 };
 
@@ -137,7 +137,7 @@ const INITIAL_INQUIRIES = [
     email: 'aarav.sharma@example.com',
     eventType: 'Wedding Entry & Stage Decor',
     eventDate: '2026-11-18',
-    city: 'Mumbai',
+    city: 'Rehti, Sehore',
     guestCount: '450',
     message: 'Looking for a royal floral mandap stage decor and an 8-point cold pyro spark entry for the groom baraat.',
     status: 'New',
@@ -151,7 +151,7 @@ const INITIAL_INQUIRIES = [
     email: 'vikram.m@example.com',
     eventType: 'Pyro & Fire Effects Shows',
     eventDate: '2026-10-05',
-    city: 'Pune',
+    city: 'Sehore',
     guestCount: '300',
     message: 'Need indoor-safe cold spark fountains and heavy dry ice fog for couple entrance and sangeet night.',
     status: 'Contacted',
@@ -165,7 +165,7 @@ const INITIAL_INQUIRIES = [
     email: 'pooja.d@example.com',
     eventType: 'Costume Characters & Birthday',
     eventDate: '2026-09-12',
-    city: 'Thane',
+    city: 'Bhopal',
     guestCount: '80',
     message: 'Son is turning 6, loves superhero & King Kong theme. Want gorilla mascot entry + superhero balloon backdrop.',
     status: 'Booked',
@@ -194,7 +194,7 @@ const INITIAL_BOOKINGS = [
     clientName: 'Pooja Deshmukh (Advik 6th Birthday)',
     service: 'Costume Mascot + Neon Balloon Decor',
     date: '2026-09-12',
-    venue: 'Emerald Club, Thane',
+    venue: 'Celebration Garden, Rehti',
     amount: '₹38,000',
     status: 'Confirmed'
   },
@@ -203,7 +203,7 @@ const INITIAL_BOOKINGS = [
     clientName: 'Kapoor & Mehta Sangeet',
     service: 'Pyro Cold Sparks & Dry Ice Fog',
     date: '2026-09-26',
-    venue: 'Taj Lands End, Bandra',
+    venue: 'Royal Palace, Sehore',
     amount: '₹65,000',
     status: 'Confirmed'
   },
@@ -212,7 +212,7 @@ const INITIAL_BOOKINGS = [
     clientName: 'Rohan & Ananya Wedding',
     service: 'Royal Floral Stage & Baraat Entry',
     date: '2026-10-15',
-    venue: 'JW Marriott, Juhu',
+    venue: 'Lake View Resort, Bhopal',
     amount: '₹1,85,000',
     status: 'Confirmed'
   }

@@ -1,0 +1,20 @@
+# Robots.txt for Shri Shyam Events & Spark Productions
+# Domain: https://shrishyamevents.com/
+# Location: Rehti, District Sehore, Madhya Pradesh - 466446
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/public.js
+Allow: /js/store.js
+Allow: /js/app.js
+
+# Prevent indexing of internal administrative CRM
+Disallow: /admin.html
+Disallow: /admin/
+Disallow: /js/admin.js
+
+# Host & Sitemap specification for search engine spiders
+Host: https://shrishyamevents.com/
+Sitemap: https://shrishyamevents.com/sitemap.xml

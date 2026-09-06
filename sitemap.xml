@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Primary Homepage (High Priority) -->
+  <url>
+    <loc>https://shrishyamevents.com/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shrishyamevents.com/preview-banner.png</image:loc>
+      <image:title>Shri Shyam Events Rehti | Shree Shyam Events | Shyam Events Rehti</image:title>
+      <image:caption>Shree Shyam events Rehti (Rehti events, Shyam rehti, Event rehti) - Luxury Wedding Decoration &amp; Cold Pyro Stage Shows in Rehti, District Sehore, MP 466446</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Luxury Event Production Services -->
+  <url>
+    <loc>https://shrishyamevents.com/#services</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Live Showcase Portfolio & Gallery -->
+  <url>
+    <loc>https://shrishyamevents.com/#gallery</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Why Choose Us & Safety Certifications -->
+  <url>
+    <loc>https://shrishyamevents.com/#why-us</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us & Studio Heritage -->
+  <url>
+    <loc>https://shrishyamevents.com/#about</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Client Reviews & Testimonials -->
+  <url>
+    <loc>https://shrishyamevents.com/#reviews</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Check Date Availability & Inquire -->
+  <url>
+    <loc>https://shrishyamevents.com/#inquire</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Frequently Asked Questions -->
+  <url>
+    <loc>https://shrishyamevents.com/#faq</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

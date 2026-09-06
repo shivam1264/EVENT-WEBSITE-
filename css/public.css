@@ -2588,6 +2588,29 @@ img {
   font-weight: 500;
 }
 
+.consult-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #a86c14;
+  text-decoration: none;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: all 0.2s ease;
+}
+
+.consult-map-link:hover {
+  background: rgba(212, 175, 55, 0.2);
+  color: #83520a;
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-1px);
+}
+
 /* WhatsApp Sub Box */
 .consult-wa-box {
   background: rgba(255, 253, 248, 0.95);
