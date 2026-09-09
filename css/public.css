@@ -3226,6 +3226,43 @@ img {
   color: #64748b;
 }
 
+.footer-studio-admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1.2px solid rgba(212, 175, 55, 0.45);
+  border-radius: 20px;
+  color: #edd18a;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+}
+
+.footer-studio-admin-btn:hover {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  color: #090e18;
+  border-color: #d4af37;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.footer-studio-admin-btn svg {
+  stroke: #d4af37;
+  transition: stroke 0.25s ease;
+}
+
+.footer-studio-admin-btn:hover svg {
+  stroke: #090e18;
+}
+
+
+
 /* Section Theme Colors */
 .section-gallery {
   background: var(--bg-tertiary);
